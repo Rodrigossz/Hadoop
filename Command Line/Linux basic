@@ -1,0 +1,19 @@
+Linux Commands
+
+$ cat /etc/*-release
+
+df
+vmstat
+top
+sar
+ifconfig
+free
+
+/tmp/spread *.log
+/var/log/spreadd.log
+/opt/vertica/bin/diagnostics
+
+find diretorio -atime +8 -exec rm -f {} \;
+
+onde o atime é o tempo da última alteração.
+E mais 8 são os mais velhos , ou seja, mais que oito horas.
