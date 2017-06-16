@@ -1,8 +1,5 @@
-Overview
-The File System (FS) shell includes various shell-like commands that directly interact with the Hadoop Distributed File System (HDFS) as well as other file systems that Hadoop supports, such as Local FS, HFTP FS, S3 FS, and others. The FS shell is invoked by: 
-bin/hdfs dfs <args>
-All FS shell commands take path URIs as arguments. The URI format is scheme://autority/path. For HDFS the scheme is hdfs, and for the Local FS the scheme is file. The scheme and authority are optional. If not specified, the default scheme specified in the configuration is used. An HDFS file or directory such as /parent/child can be specified as hdfs://namenodehost/parent/child or simply as /parent/child (given that your configuration is set to point to hdfs://namenodehost). 
-Most of the commands in FS shell behave like corresponding Unix commands. Differences are described with each of the commands. Error information is sent to stderr and the output is sent to stdout. 
+https://hadoop.apache.org/docs/r1.0.4/file_system_shell.html#Overview
+
 cat 
 Usage: hdfs dfs -cat URI [URI …] 
 Copies source paths to stdout. 
@@ -11,21 +8,27 @@ hdfs dfs -cat hdfs://nn1.example.com/file1 hdfs://nn2.example.com/file2
 hdfs dfs -cat file:///file3 /user/hadoop/file4 
 Exit Code:
 Returns 0 on success and -1 on error. 
+
 chgrp 
 Usage: hdfs dfs -chgrp [-R] GROUP URI [URI …] 
 Change group association of files. With -R, make the change recursively through the directory structure. The user must be the owner of files, or else a super-user. Additional information is in the Permissions Guide. 
+
 chmod 
 Usage: hdfs dfs -chmod [-R] <MODE[,MODE]... | OCTALMODE> URI [URI …] 
 Change the permissions of files. With -R, make the change recursively through the directory structure. The user must be the owner of the file, or else a super-user. Additional information is in the Permissions Guide. 
+
 chown 
 Usage: hdfs dfs -chown [-R] [OWNER][:[GROUP]] URI [URI ] 
 Change the owner of files. With -R, make the change recursively through the directory structure. The user must be a super-user. Additional information is in the Permissions Guide. 
+
 copyFromLocal
 Usage: hdfs dfs -copyFromLocal <localsrc> URI 
 Similar to put command, except that the source is restricted to a local file reference. 
+
 copyToLocal
 Usage: hdfs dfs -copyToLocal [-ignorecrc] [-crc] URI <localdst> 
 Similar to get command, except that the destination is restricted to a local file reference.
+
 count 
 Usage: hdfs dfs -count [-q] <paths> 
 Count the number of directories, files and bytes under the paths that match the specified file pattern. 
