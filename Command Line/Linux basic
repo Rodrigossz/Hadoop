@@ -1,3 +1,4 @@
+
 Linux Commands
 
 cat /etc/*-release
@@ -8,16 +9,31 @@ sar
 ifconfig
 free
 xdpyinfo | grep dim
+tree
+pushd / popd -> directories navigation
+$ do_something > all-output-file 2>&1
+whereis
+which
 
---Folders---------------------
-/etc/ntp.conf   
-/tmp/spread *.log
-/var/log/spreadd.log
-/opt/vertica/bin/diagnostics
-
+-----------------------
+To find and remove all files that end with .swp:
+$ find -name "*.swp" -exec rm {} ’;’
+-----------------------
+To find files based on time:
+$ find / -ctime 3
 ----------------------
-find diretorio -atime +8 -exec rm -f {} \;
+To find files based on sizes:
+$ find / -size 0
+-------------------------------
+For example, to find files greater than 10 MB in size and running a command on those files:
 
-onde o atime é o tempo da última alteração.
-E +8 são os mais velhos , ou seja, mais que oito horas.
+$ find / -size +10M -exec command {} ’;’
+-------------------------------
+atime é o tempo da última alteração. E +8 são os mais velhos , ou seja, mais que oito horas.
+$ find teste.txt -atime +8 -exec rm -f {} \; 
+---------------------------------
+? - Matches any single character
+* - Matches any string of characters
+[set] - Matches any character in the set of characters, for example [adf] will match any occurrence of "a", "d", or "f"
+[!set] - Matches any character not in the set of characters
 ---------------------------------
