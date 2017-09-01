@@ -1,20 +1,23 @@
 Linux Commands
 
-$ cat /etc/*-release
-
+cat /etc/*-release
 df
 vmstat
 top
 sar
 ifconfig
 free
+xdpyinfo | grep dim
 
+--Folders---------------------
+/etc/ntp.conf   
 /tmp/spread *.log
 /var/log/spreadd.log
 /opt/vertica/bin/diagnostics
 
------------
+----------------------
 find diretorio -atime +8 -exec rm -f {} \;
 
 onde o atime é o tempo da última alteração.
 E +8 são os mais velhos , ou seja, mais que oito horas.
+---------------------------------
