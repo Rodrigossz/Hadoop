@@ -37,3 +37,6 @@ $ find teste.txt -atime +8 -exec rm -f {} \;
 [set] - Matches any character in the set of characters, for example [adf] will match any occurrence of "a", "d", or "f"
 [!set] - Matches any character not in the set of characters
 ---------------------------------
+to view IPs that have logged onto the VM
+zgrep -i "Accepted password" /var/log/auth.log*
+
