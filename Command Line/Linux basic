@@ -3,6 +3,8 @@ Linux Commands
 
 cat /etc/*-release
 df
+du -h
+du -sh
 vmstat
 top
 sar
